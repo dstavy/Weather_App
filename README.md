@@ -35,7 +35,7 @@ A simple MVI weather app that uses openweathermap APIs to show current weater is
 
 * Kotlin
 * Dagger Hilt
-* Compose
+* Jetpack Compose
 * Retrofit
 * Coil
 
