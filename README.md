@@ -45,7 +45,7 @@ A simple MVI weather app that uses openweathermap APIs to show current weater is
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Enter a name of a city, press the Find Weater button. A card withe the current weater in the selcted city wil apear beolw. In case of error, an error message will be diplayed instead.
+Enter a name of a city, press the "Find Weater" button. A card withe the current weater in the selcted city wil apear beolw. In case of error, an error message will be diplayed instead.
 _For more examples.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
