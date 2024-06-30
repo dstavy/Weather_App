@@ -4,6 +4,11 @@ import com.eyeclick.weatherapp.data.remote.WeatherDto
 import com.eyeclick.weatherapp.domain.weather.WeatherData
 
 
+/**
+ *  mapper from [WeatherDto] To [WeatherData]
+ *
+ * @return
+ */
 fun WeatherDto.toWeatherData(): WeatherData {
     return WeatherData(
         description = weather.first().description,

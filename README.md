@@ -24,7 +24,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A simple MVI weather app that uses openweathermap APIs to show current weater is selcted city
+A simple MVI weather app that uses openweathermap APIs to show current weather is selected city
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -45,7 +45,7 @@ A simple MVI weather app that uses openweathermap APIs to show current weater is
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Enter a name of a city, press the "Find Weather" button. A card withe the current weater in the selcted city wil apear beolw. In case of error, an error message will be diplayed instead.
+Enter a name of a city, press the "Find Weather" button. A card withe the current weather in the selected city wil appear below. In case of error, an error message will be displayed instead.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -57,8 +57,8 @@ Enter a name of a city, press the "Find Weather" button. A card withe the curren
 - [ ] Add Changelog
 - [ ] Add code documentation
 - [ ] Add current location weather 
-- [ ] Add 5 days weather forcast
-- [ ] Better errro haneling
+- [ ] Add 5 days weather forecast
+- [ ] Better error handling
 - [ ] Multi-language Support
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,6 +1,6 @@
 package com.eyeclick.weatherapp.data.remote
 
-data class Main(
+data class MainDto(
     val temp: Double, // 288.18
     val feels_like: Double, // 287.91
     val temp_min: Double, // 286.21

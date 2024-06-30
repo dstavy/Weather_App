@@ -7,6 +7,11 @@ import com.eyeclick.weatherapp.domain.util.Resource
 import com.eyeclick.weatherapp.domain.weather.WeatherData
 import javax.inject.Inject
 
+/**
+ * [WeatherApi] repository impl
+ *
+ * @property api
+ */
 class WeatherRepositoryImpl @Inject constructor(
     private val api: WeatherApi
 ) : WeatherRepository {

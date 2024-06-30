@@ -1,6 +1,6 @@
 package com.eyeclick.weatherapp.data.remote
 
-data class Weather(
+data class WeatherMetadataDto(
     val id: Int, // 804
     val main: String, // Clouds
     val description: String, // overcast clouds

@@ -1,6 +1,6 @@
 package com.eyeclick.weatherapp.data.remote
 
-data class Sys(
+data class SysDto(
     val type: Int, // 2
     val id: Int, // 2075535
     val country: String, // GB
