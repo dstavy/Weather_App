@@ -56,7 +56,7 @@ _For more examples.
 ## Roadmap
 
 - [ ] Add Changelog
-- [ ] Add code decumentation
+- [ ] Add code documentation
 - [ ] Add current location weather 
 - [ ] Add 5 days weather forcast
 - [ ] Better errro haneling
