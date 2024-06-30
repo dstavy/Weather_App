@@ -63,13 +63,11 @@ fun WeatherCard(
                     contentDescription = null,
                     modifier = Modifier.width(200.dp)
                 )
-                //Spacer(modifier = Modifier.height(16.dp))
                 Text(
                     text = "${data.temperature.roundToInt()}°C",
                     fontSize = 50.sp,
                     color = Color.White
                 )
-                //Spacer(modifier = Modifier.height(16.dp))
                 Text(
                     text = data.description,
                     fontSize = 20.sp,
