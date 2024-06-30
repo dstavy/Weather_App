@@ -24,7 +24,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A simple MVI weather app that uses openweathermap APIs to show current weather is selected city
+A simple MVVM weather app that uses openweathermap APIs to show current weather is selected city
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

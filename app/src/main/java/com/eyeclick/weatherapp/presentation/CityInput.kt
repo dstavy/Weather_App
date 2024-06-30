@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
@@ -21,23 +20,22 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun CityInput(
-    viewModel: WeatherViewModel,
+    state: WeatherState,
+    updateCity: (input: String) -> Unit,
+    load: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val focusManager = LocalFocusManager.current
 
     Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp),
+        modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly
     )
     {
         TextField(
-            value = viewModel.state.inputCity,
-
-            onValueChange = { city: String -> viewModel.updateCity(city) },
+            value = state.inputCity,
+            onValueChange = { city: String -> updateCity(city) },
             label = { Text("City") },
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 backgroundColor = Color.White,
@@ -55,7 +53,7 @@ fun CityInput(
             shape = RoundedCornerShape(100.dp),
             onClick = {
                 focusManager.clearFocus(true)
-                viewModel.loadWeatherData()
+                load()
             },
             colors = ButtonDefaults.buttonColors(backgroundColor = Color.LightGray)
         )

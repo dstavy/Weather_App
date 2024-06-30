@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
@@ -44,10 +45,18 @@ class MainActivity : ComponentActivity() {
                             .padding(vertical = 16.dp)
 
                     ) {
-                        CityInput(viewModel = viewModel)
+                        CityInput(
+                            state = viewModel.state,
+                            updateCity = viewModel::updateCity,
+                            load = viewModel::loadWeatherData,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                        )
                         WeatherCard(
                             state = viewModel.state,
-                            backgroundColor = DeepBlue
+                            backgroundColor = DeepBlue,
+                            modifier = Modifier.padding(16.dp)
                         )
                     }
                     if (viewModel.state.isLoading) {
@@ -67,5 +76,6 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
 
 }
