@@ -1,4 +1,4 @@
-<a id="readme-top"></a>
+## readme-top
 
 
 
@@ -54,6 +54,7 @@ selected city wil appear below. In case of error, an error message will be displ
 
 ## Roadmap
 
+- [ ] Add tests
 - [ ] Add Changelog
 - [ ] Add code documentation
 - [ ] Add current location weather
