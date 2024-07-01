@@ -43,7 +43,7 @@ A simple MVI weather app that uses openweathermap APIs to show current weather i
 
 ## Usage
 
-Enter a name of a city, press the "Find Weather" button. A card withe the current weather in the
+Enter a name of a city, press the "Get Weather" button. A card withe the current weather in the
 selected city wil appear below. In case of error, an error message will be displayed instead.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
