@@ -6,7 +6,7 @@ data class WeatherDto(
     val base: String, // stations
     val main: MainDto,
     val visibility: Int, // 10000
-    val wind: Wind,
+    val wind: WindDto,
     val clouds: CloudsDto,
     val dt: Int, // 1719734528
     val sys: SysDto,
