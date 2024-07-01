@@ -8,7 +8,7 @@ import com.eyeclick.weatherapp.domain.weather.WeatherData
 import javax.inject.Inject
 
 /**
- * [WeatherApi] repository impl
+ * [WeatherRepository] repository impl
  *
  * @property api
  */
