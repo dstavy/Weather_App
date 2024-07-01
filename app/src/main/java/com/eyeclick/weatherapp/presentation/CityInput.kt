@@ -21,8 +21,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun CityInput(
     state: WeatherState,
-    updateCity: (input: String) -> Unit,
-    load: () -> Unit,
+    onIntent: (intent: WeatherIntent) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val focusManager = LocalFocusManager.current
@@ -35,7 +34,7 @@ fun CityInput(
     {
         TextField(
             value = state.inputCity,
-            onValueChange = { city: String -> updateCity(city) },
+            onValueChange = { city: String -> onIntent(WeatherIntent.UpdateCity(city)) },
             label = { Text("City") },
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 backgroundColor = Color.White,
@@ -53,7 +52,7 @@ fun CityInput(
             shape = RoundedCornerShape(100.dp),
             onClick = {
                 focusManager.clearFocus(true)
-                load()
+                onIntent(WeatherIntent.Load)
             },
             colors = ButtonDefaults.buttonColors(backgroundColor = Color.LightGray)
         )

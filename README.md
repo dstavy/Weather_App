@@ -1,4 +1,3 @@
-
 <a id="readme-top"></a>
 
 
@@ -22,16 +21,14 @@
 
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-A simple MVVM weather app that uses openweathermap APIs to show current weather is selected city
+A simple MVI weather app that uses openweathermap APIs to show current weather is selected city
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
-
 
 * Kotlin
 * Dagger Hilt
@@ -43,20 +40,23 @@ A simple MVVM weather app that uses openweathermap APIs to show current weather 
 
 
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
-Enter a name of a city, press the "Find Weather" button. A card withe the current weather in the selected city wil appear below. In case of error, an error message will be displayed instead.
+Enter a name of a city, press the "Find Weather" button. A card withe the current weather in the
+selected city wil appear below. In case of error, an error message will be displayed instead.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 - [ ] Add Changelog
 - [ ] Add code documentation
-- [ ] Add current location weather 
+- [ ] Add current location weather
 - [ ] Add 5 days weather forecast
 - [ ] Better error handling
 - [ ] Multi-language Support
@@ -65,6 +65,7 @@ Enter a name of a city, press the "Find Weather" button. A card withe the curren
 
 
 <!-- CONTACT -->
+
 ## Contact
 
 Your Name - Dan Stavy - dstavy@gmail.com

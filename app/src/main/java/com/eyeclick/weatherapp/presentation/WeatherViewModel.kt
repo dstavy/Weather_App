@@ -1,13 +1,13 @@
 package com.eyeclick.weatherapp.presentation
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.eyeclick.weatherapp.domain.repository.WeatherRepository
 import com.eyeclick.weatherapp.domain.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -16,25 +16,32 @@ class WeatherViewModel @Inject constructor(
     private val repository: WeatherRepository,
 ) : ViewModel() {
 
-    var state by mutableStateOf(WeatherState())
-        private set
+    private val _state = MutableStateFlow(WeatherState())
+    val state: StateFlow<WeatherState> = _state.asStateFlow()
 
-    fun loadWeatherData() {
+    fun onIntent(intent: WeatherIntent) {
+        when (intent) {
+            is WeatherIntent.Load -> loadWeatherData()
+            is WeatherIntent.UpdateCity -> updateCity(intent.updatedCity)
+        }
+    }
+
+    private fun loadWeatherData() {
         viewModelScope.launch {
-            state = state.copy(
+            _state.value = _state.value.copy(
                 isLoading = true,
                 error = null
             )
-            val result = repository.getWeatherData(state.inputCity.trim())
+            val result = repository.getWeatherData(_state.value.inputCity.trim())
 
-            state = if (result is Resource.Success) {
-                state.copy(
+            _state.value = if (result is Resource.Success) {
+                _state.value.copy(
                     weatherData = result.data,
                     isLoading = false,
                     error = null
                 )
             } else {
-                state.copy(
+                _state.value.copy(
                     weatherData = null,
                     isLoading = false,
                     error = result.message
@@ -43,9 +50,9 @@ class WeatherViewModel @Inject constructor(
         }
     }
 
-    fun updateCity(input: String) {
-        state = state.copy(
-            inputCity = input
+    private fun updateCity(updatedCity: String) {
+        _state.value = _state.value.copy(
+            inputCity = updatedCity
         )
     }
 

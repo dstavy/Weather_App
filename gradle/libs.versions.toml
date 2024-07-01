@@ -11,13 +11,15 @@ composeBom = "2024.06.00"
 coilCompose = "2.6.0"
 converterMoshi = "2.11.0"
 hiltAndroid = "2.51.1"
+lifecycleViewmodelCompose = "2.8.2"
+lifecycleViewmodelKtx = "2.8.2"
 loggingInterceptor = "5.0.0-alpha.14"
 moshiKotlin = "1.15.1"
-material3Android = "1.2.1"
-
 
 [libraries]
 androidx-compose-material-material2 = { module = "androidx.compose.material:material" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "converterMoshi" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
